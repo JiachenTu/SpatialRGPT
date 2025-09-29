@@ -42,7 +42,7 @@ def register_datasets_mixtures():
     llava_1_5_mm_align = Dataset(
         dataset_name="llava_1_5_mm_align",
         dataset_type="torch",
-        data_path="/PATH/LLaVA-CC3M-Pretrain-595K/chat.json",
+        data_path="/PATH/LLaVA-CC3M-Pretrain-595K/chat.json",  # TODO: Update with your LLaVA-CC3M path
         image_path="/PATH/LLaVA-CC3M-Pretrain-595K/images",
     )
     add_dataset(llava_1_5_mm_align)
@@ -50,7 +50,7 @@ def register_datasets_mixtures():
     llava_1_5_sft = Dataset(
         dataset_name="llava_1_5_sft",
         dataset_type="torch",
-        data_path="/PATH/llava_v1_5_mix665k.json",
+        data_path="/PATH/llava_v1_5_mix665k.json",  # TODO: Update with your LLaVA-1.5 path
         image_path="/PATH/data",
     )
     add_dataset(llava_1_5_sft)
@@ -58,9 +58,9 @@ def register_datasets_mixtures():
     spatialrgpt_ft = Dataset(
         dataset_name="spatialrgpt_ft",
         dataset_type="spatialrgpt",
-        data_path="/PATH/result_10_depth_convs.json",
-        image_path="/PATH/Openimages/train",
-        depth_path="/PATH/relative_depth/raw",
+        data_path="/home/jiachen/scratch/graph_reasoning/datasets/OpenSpatialDataset/result_10_depth_convs.json",
+        image_path="/home/jiachen/scratch/graph_reasoning/datasets/OpenImages/train",
+        depth_path="/home/jiachen/scratch/graph_reasoning/datasets/depth_maps",
         description="900K SFT data by SpatialRGPT (submission) w/ depth (template+LLaMa rephrased).",
     )
     add_dataset(spatialrgpt_ft)
